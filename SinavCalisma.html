@@ -10,16 +10,94 @@
 
     <h1 id="textBaslik"></h1>
     <p id="p5"></p>
-    
-    
-    
+ 
     <script>
         document.getElementById("textBaslik").innerHTML="Merhaba Başlık";
         document.getElementById("p5").innerHTML="Merhaba Alt Metin";
         // 'getElementById' döküman içerisinde verilen elemanın özelliklerine erişmek için kulllanılır.
         // 'innerHTML' seçilen html öğesinin içeriğini değiştirmek için kullanılır
-        
-        
     </script>
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    <script>
+        var metin1="Merhaba";
+        var metin2="Dünya"
+        // alert(metin1+metin2)
+        var sonuc=metin+metin2;
+        alert(sonuc)
+
+        // 'var' değişkenin metin özelliğini kullandım.
+
+        var sayi1="10";
+        var sayi2="20";
+        // alert(sayi1+sayi2);
+        var sonuc1=sayi1+sayi2;
+        alert(sonuc1)
+
+        // 'var' değişkenin sayı özelliğini kullandım.
+    </script>
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+        <div id="div"></div>
+
+    <script>
+        var sayi1=25;
+        var sayi2=10;
+        var sonuc=sayi1+sayi2;
+        document.getElementById("div").innerHTML=sonuc;
+
+        //Toplama işlemi ile div özelliği değiştirme.
+    </script>
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+        <input type="text" id="txtAd" placeholder="Ad Giriniz.">
+    <button id="btn">Tıkla</button>
+
+    <script>
+        var butonAl = document.getElementById("btn");
+
+        butonAl.onclick=function(){
+            var metin = document.getElementById("txtAd").value;
+
+            alert("Merhaba " + metin);
+        }
+        //İlk Önce "txtAd" adında text öğesi "btn" adında Buton öğesi oluşturduk
+        //Sonrasında 'btn' öğesini 'butonAl' değişkenine atadık
+        //'butonAl' değişkeninin "onclick" özelliğini kullanarak bir fonksiyon oluşturduk
+        //'txtAd' öğesini 'metin'e atadık ve "value" özelliği ile girilen değieri 'metin'e atadık
+        //En sonda "alert" özelliği ile yazdırıldı 
+    </script>
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    <input type="number" id="txtSayi1" placeholder="1.Sayıyı Giriniz.">
+    <input type="number" id="txtSayi2" placeholder="2.Sayıyı Giriniz.">
+    <button id="btn">Topla</button>
+    <div id="sonucDiv"></div>
+
+    <script>
+        var btnTopla=document.getElementById("btn");
+
+        btnTopla.onclick=function(){
+            var s1 =Number(document.getElementById("txtSayi1").value);
+            var s2 =Number(document.getElementById("txtSayi2").value);
+            var sonuc = s1+s2;
+            document.getElementById("sonucDiv").innerHTML="Sonuc:"+sonuc;
+        }
+        //'txtSayi1','txtSayi2','btn' ve 'sonucDiv' olarak 4 tane yeni öğe oluşturduk
+        //'btn' öğesini 'btnTopla' değişkenine atadık 
+        //'btnTopla' değişkeninin "onclick" özelliğini kullanarak yeni fonksiyon oluşturduk
+        //'txtSayi1' ve 'txtSayi2'nin değerlerini "Number" özelliğiyle sayıya çevirdik ve 'sonuc' adlı değişkenle toplama işlemini yaptırdık
+        //Son olarak oluşturduğımuz div öğesine "innerHTML" yardımıyla yazdırdık
+
+    </script>
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    
+    
 </body>
 </html>
