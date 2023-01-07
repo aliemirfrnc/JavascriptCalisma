@@ -97,6 +97,50 @@
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     
+    <input type="number" id="txtKenar1" placeholder="Kenar1">
+    <input type="number" id="txtKenar2" placeholder="Kenar2">
+    <button id="btn">Hesapla</button>
+    <div id="div"></div>
+
+    <script>
+        var btnHesapla = document.getElementById("btn");
+
+
+        btnHesapla.onclick=function(){
+            var kenar1 = Number(document.getElementById("txtKenar1").value);
+            var kenar2 = Number(document.getElementById("txtKenar2").value);
+            var alan = kenar1*kenar2;
+            var cevre = (kenar1*kenar2)*2;
+            document.getElementById("div").innerHTML="Alan:"+ alan + "Çevre:"+cevre
+        }
+        //'txtKenar1','txtKenar2','btn' ve 'div' adında 4 yeni öğe oluşturdum.
+        //'btn' adlı buton öğesini 'btnHesapla' değişkenine atadım
+        //'btnHesapla' değişkenin "onclick" özelliğini kullanarak yeni fonksiyon oluşturdum.
+        //'txtKenar1' ve 'txtKenar2'nin değerlerini "Number" özelliğiyle sayıya çevirdik ardından 'alan' ve 'cevre' hesaplamalarını yaptırdım.
+        //Son olarak oluşturduğımuz div öğesine "innerHTML" yardımıyla yazdırdık  
+
+    </script>
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+        <input type="number" id="txtSayi1" placeholder="1.Notu Girin:">
+    <input type="number" id="txtSayi2" placeholder="2.Notu Girin:">
+    <button id="btn">Hesapla</button>
+    <div id="div"></div>
+
+    <script>
+        var btnHesapla = document.getElementById("btn");
+
+        btnHesapla.onclick=function(){
+            var not1 = Number(document.getElementById("txtSayi1").value);
+            var not2 = Number(document.getElementById("txtSayi2").value);
+            var ortalama = (not1+not2)/2;
+            document.getElementById("div").innerHTML="Ortalama:"+ortalama
+        }
+
+
+    </script>
+    
     
     
 </body>
