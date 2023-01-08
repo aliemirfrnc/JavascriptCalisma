@@ -189,5 +189,95 @@
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     
+        <input type="text" id="txtVeriAl" placeholder="Eleman adı">
+    <button id="btn">Ekle</button>
+    <ul id="liste">
+        <li>Ahmet</li>
+    </ul>
+
+    <script>
+        var btnEkle = document.getElementById("btn");
+        var lst = document.getElementById("liste");
+
+        btnEkle.onclick=function(){
+            var eleman = document.getElementById("txtVeriAl").value;
+            lst.innerHTML += "<li>"+eleman+'</li>'
+        }
+        //'txtVeriAl',"btn" ve 'liste' adında 3 yeni öğe ekledik.
+        //'btnEkle' değişkenin "onclick" özelliğini kullanarak yeni fonksiyon oluşturdum.
+        //'lst' değişkenin "innerHTML" özelliğiyle "+=" operatörüyle textboxtan girilen değeri listeye yazdırdık.
+    </script>
+    
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+        <input type="number" id="txtSayi" placeholder="Sayı Giriniz.">
+    <button id="btn">Hesapla</button>
+    <div id="div"></div>
+
+
+    <script>
+        var btnHesapla = document.getElementById("btn");
+
+        btnHesapla.onclick=function(){
+            var sayi =Number(document.getElementById("txtSayi").value);
+            if( sayi % 2 == 0 ){
+                document.getElementById("div").innerHTML="Girilen değer çift";
+             }
+             else{
+                document.getElementById("div").innerHTML="Girilen değer tek"
+             }
+        }
+        //'txtSayi','btn' ve 'div' adında 3 yeni öğe oluşturduk.
+        //'btnHesapla'nın "onclick" özelliğiyle yeni fonksiyon oluşturdum.
+        //'sayi' adındaki değişkeni 'txtSayi' öğesiyle bağladım.
+        //sayının 2'ye bölümünden kalan 0 kurallı koşul oluşturdum.
+        //eğer koşula uyuyorsa 'div' öğesine "Girilen değer çift" uymuyorsa "Girilen değer tek" yazdırdık.
+    </script>
+    
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+        <input type="number" id="txtSayi1" placeholder="0-100 arasında not giriniz.">
+    <button id="btn">Hesapla</button>
+    <div id="div"></div>
+
+
+    <script>
+        var btnHesapla = document.getElementById("btn");
+
+        btnHesapla.onclick=function(){
+
+            var not = Number(document.getElementById("txtSayi1").value)
+
+            if(not >= 0 && not < 50 ){
+                document.getElementById("div").innerHTML="Not:1"
+            }
+            else if(not >= 50 && not < 60 ){
+                document.getElementById("div").innerHTML="Not:2"
+            }
+            else if(not >= 60 && not < 70 ){
+                document.getElementById("div").innerHTML="Not:3"
+            }
+            else if(not >= 70 && not < 85 ){
+                document.getElementById("div").innerHTML="Not:4"
+            }
+            else if(not >= 85 && not < 100 ){
+                document.getElementById("div").innerHTML="Not:5"
+            }
+            else{
+                document.getElementById("div").innerHTML="Geçersiz Not Girdiniz."
+
+            }
+        }
+         //'txtSayi1','btn' ve 'div' adında 3 yeni öğe oluşturduk.
+         //'btnHesapla'nın "onclick" özelliğiyle yeni fonksiyon oluşturdum.
+         //'not' adındaki değişkeni 'txtSayi1' öğesiyle bağladım.
+         //ve 'not'un (0'dan büyük eşit ve 50'den küçük) kurallı koşulu oluşturdum(diğer oluşturulan koşullarda aynı mantıkla yazıldı)
+         //son olarak koşulun doğru olması sonucunda 'div' değikenine notun değerinin yazılmasını sağladım. 
+    </script>
+    
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    
+    
 </body>
 </html>
