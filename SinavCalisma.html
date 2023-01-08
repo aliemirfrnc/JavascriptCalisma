@@ -277,6 +277,24 @@
     
         ///////////////////////////////////////////////////////////////////////////////////////////////////
     
+        <img id="resim" src="Screenshot_2021-11-10-05-18-21-53_1c337646f29875672b5a61192b9010f9.jpg">
+    <button id="btn">Tıkla</button>
+
+    <script>
+        var butonDegistir = document.getElementById("btn");
+        butonDegistir.onclick=function(){
+
+            var resimDegisken = document.getElementById("resim"); // resim elementini seçin
+            var suankiGenislik = resimDegisken.clientWidth; // resim elementinin şu anki genişliğini alın
+            var suankiYukseklik = resimDegisken.clientHeight; // resim elementinin şu anki yüksekliğini alın
+
+            resimDegisken.style.width = (suankiGenislik *2) + "px"; // resim elementinin genişliğini iki katına çıkarın
+            resimDegisken.style.height = (suankiYukseklik *2) + "px"; // resim elementinin yüksekliğini iki katına çıkarın
+        }
+        
+
+    </script>
+    
     
     
 </body>
