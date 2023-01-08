@@ -141,7 +141,53 @@
 
     </script>
     
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
     
+        <input type="number" id="txtSayi1" placeholder="1. Sayı Giriniz.">
+    <input type="number" id="txtSayi2" placeholder="2. Sayı Giriniz.">
+    <button id="btnTopla" >Topla</button>
+    <button id="btnCikar" >Çıkar</button>
+    <button id="btnCarpma">Çarpma</button>
+    <button id="btnBolme">Bölme</button>
+    <div id="div"></div>
+
+    <script>
+        var topla = document.getElementById("btnTopla");
+        var cikar = document.getElementById("btnCikar");
+        var carpma = document.getElementById("btnCarpma");
+        var bolme = document.getElementById("btnBolme");
+        
+
+        topla.onclick=function(){
+            var s1=Number(document.getElementById("txtSayi1").value)
+            var s2=Number(document.getElementById("txtSayi2").value)
+            var toplam=s1+s2
+            document.getElementById("div").innerText="Toplam:"+toplam;
+        }
+        cikar.onclick=function(){
+            var s1=Number(document.getElementById("txtSayi1").value)
+            var s2=Number(document.getElementById("txtSayi2").value)
+            var cikan=s1-s2
+            document.getElementById("div").innerText="Çıkan:"+cikan;
+        }
+        carpma.onclick=function(){
+            var s1=Number(document.getElementById("txtSayi1").value)
+            var s2=Number(document.getElementById("txtSayi2").value)
+            var carpim=s1*s2
+            document.getElementById("div").innerText="Çarpma:"+carpim;
+        }
+        bolme.onclick=function(){
+            var s1=Number(document.getElementById("txtSayi1").value)
+            var s2=Number(document.getElementById("txtSayi2").value)
+            var bolum=s1/s2
+            document.getElementById("div").innerText="Bölüm:"+bolum;
+        }
+        //'txtSayi1','txtSayi2','div' öğeleri ve adları ('topla','cikar','carpma','bolme') olan 4 buton öğesi oluşturduk.
+        //her yeni oluşturulan fonksiyonun içerisine 's1' ve 's2' değerlerini "Number" özelliğiyle sayı değerine çevirdik
+        //son olarak her fonksiyonun içerisinde işlemleri yaptırık ve 'div' adındaki öğeye yazdırdık. 
+    </script>
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
     
 </body>
 </html>
